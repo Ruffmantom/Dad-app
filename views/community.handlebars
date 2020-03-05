@@ -1,0 +1,12 @@
+<h1>Dad Community</h1>
+
+<h3>See all dad jokes here!</h3>
+
+<ul>
+    {{#each jokes}}
+    <li>
+        <p>ID: {{this.id}}</p>
+        <p>Dad Joke: {{this.joke}}</p>
+    </li>
+    {{/each}}
+</ul>
