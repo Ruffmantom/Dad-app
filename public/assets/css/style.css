@@ -9,7 +9,7 @@
 font-family: Helvetica, Arial, sans-serif;
 
 */
-
+/* ==================== index "login and sign up page" ==================== */
 .main-container { 
     text-align: center !important;
     padding: 10px 0 50px 0 !important;
@@ -70,3 +70,68 @@ font-family: Helvetica, Arial, sans-serif;
     font-size: 23px;
     margin: 0;
 }
+/* ==================== the modal styles ======================= */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  .imgcontainer{
+    width: 18%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+  .login-logo{
+    height: auto;
+    width: 100%;
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    width: 98%; /* Could be more or less, depending on screen size */
+    padding: 30px 0 30px 0;
+  }
+  .modal-btn{
+      margin: 20px 0;
+  }
+  .lbl{
+      margin:0;
+      padding: 10px 0;
+  }
+  .cancelbtn{
+      background-color: lightgrey;
+      border-radius: 10px;
+      border: none;
+      padding: 5px 20px;
+  }
+  .cancelbtn:hover{
+      background-color: #c42654;
+      color: white;
+  }
+
+   
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+  /* ============================== end of login and signup page ========================== */
