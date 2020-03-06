@@ -1,6 +1,4 @@
-.right {
-    float: right !important;
-}
+
 
 .header {
     top: 0;
@@ -14,10 +12,9 @@
 }
 
 .jumbotron {
-    align-self: center !important;
-    border-top: solid white 25px;
-    width: 500px !important;
+    
     text-align: center !important;
+    padding: 10px !important;
 }
 
 .txtbox {
@@ -35,10 +32,15 @@ form {
     display: flex;
     flex-direction: column;
     width: 200px;
-    align-content: center;
     text-align: center;
 }
 
 .form {
     margin: auto;
+}
+.log-in{
+    position: relative;
+    top: 0px;
+    right:0px;
+
 }
