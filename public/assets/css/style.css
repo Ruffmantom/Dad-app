@@ -1,8 +1,37 @@
 .right {
-    float: right;
+    float: right !important;
 }
 
 .header {
     top: 0;
     right: 0;
+}
+
+.logout {
+    color: black;
+    border: 1px, 1px, 1px, 1px;
+    border-style: double;
+}
+
+.jumbotron {
+    align-self: center !important;
+    border-top: solid white 25px;
+    width: 500px !important;
+}
+
+.txtbox {
+    align-content: center;
+    margin: center;
+}
+.container {
+    border-top: solid white 25px;
+}
+.center {
+    margin: auto;
+
+}
+form {
+    display: block;
+    width: 200px;
+    align-items: auto;
 }
