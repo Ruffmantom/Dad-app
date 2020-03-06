@@ -13,9 +13,9 @@
             <p class="heading">Welcome to Dad-Life</p>
             <p class="heading">Sign up or login</p>
         </div>
-        <form class="form">
+        <form id="sign-up-form" class="form">
             <label for='name'>Name</label>
-            <input type='text' id='fname' name='name'>
+            <input type='text' id='name' name='name'>
             <label for='user-name'><span class="required">* </span>Username</label>
             <input type='text' id='username' name='username'>
             <label for='password'><span class="required">* </span>Password</label>
@@ -30,12 +30,12 @@
                     <img class="login-logo" src="../images/icons/blackIcons/logoBK.png" alt="Avatar" class="avatar">
                 </div>
 
-                <div class="form">
+                <div id="sign-in-form" class="form">
                     <label class="lbl" for='user-name'><span class="required">* </span>Username</label>
-                    <input class="lbl" id='username' type='text' name='username'>
+                    <input class="lbl" id='login-username' type='text' name='username'>
                     <label class="lbl" for='password'><span class="required">* </span>Password</label>
-                    <input class="lbl" id='password' type='text' name='password'>
-                    <a href="/profile" class='modal-btn btn btn-primary' type="submit">Login</a>
+                    <input class="lbl" id='login-password' type='text' name='password'>
+                    <a href="/profile" id="sign-in" class='modal-btn btn btn-primary' type="submit">Login</a>
                 </div>
 
                 <div class="form-container">
