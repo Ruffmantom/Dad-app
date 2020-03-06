@@ -12,6 +12,12 @@ router.get("/", function (req, res) {
 router.get("/jokes", function (req, res) {
   res.render("jokes");
 });
+router.get("/community", function (req, res) {
+  res.render("community");
+});
+router.get("/profile", function (req, res) {
+  res.render("profile");
+});
 //     res.render("index");
 //   });
 
