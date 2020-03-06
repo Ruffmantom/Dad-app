@@ -10,7 +10,7 @@ module.exports = {
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": process.env.MYSQL_PASSWORD,
     "database": "database_test",
     "host": "127.0.0.1",
     "port": 3306,
@@ -19,7 +19,7 @@ module.exports = {
   },
   "production": {
     "username": "root",
-    "password": null,
+    "password": process.env.MYSQL_PASSWORD,
     "database": "database_production",
     "host": "127.0.0.1",
     "port": 3306,
