@@ -1,11 +1,27 @@
-<h1>Post a dad joke</h1>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
 
-<ul>
-    {{#each jokes}}
-    <li>
-        <p>ID: {{this.id}}</p>
-        <p>Dad Joke: {{this.joke}}</p>
-    </li>
-    {{/each}}
-</ul>
+<body>
+    <header>
+        <button class="login"> Login</button>
+    </header>
+    <h1>Sign up</h1>
+    <form>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username">
+        <label for="password">Password</label><br>
+        <input type="text" id="password" name="password">
+        <input type="create" value="Create">
+    </form>
+</body>
+
+</html>
