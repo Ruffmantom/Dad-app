@@ -7,7 +7,7 @@
     right: 0;
 }
 
-.logout {
+.login {
     color: black;
     border: 1px, 1px, 1px, 1px;
     border-style: double;
@@ -17,6 +17,7 @@
     align-self: center !important;
     border-top: solid white 25px;
     width: 500px !important;
+    text-align: center !important;
 }
 
 .txtbox {
@@ -31,7 +32,13 @@
 
 }
 form {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 200px;
-    align-items: auto;
+    align-content: center;
+    text-align: center;
+}
+
+.form {
+    margin: auto;
 }
