@@ -1,13 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container center">
+    <div class=" main-container">
+        <!-- log in link -->
+        <div class="log-in-container">
+            <a href="#" onclick="document.getElementById('id01').style.display='block'" class="log-in">Login</a>
+        </div>
+        <!-- logo container -->
+        <div class="logo-div">
+            <img id="signup-logo" src="../images/icons/blackIcons/logoBK.png" alt="dad life">
+        </div>
+        <!-- headdings and form -->
+        <div class="heading-container">
+            <p class="heading">Welcome to Dad-Life</p>
+            <p class="heading">Sign up or login</p>
+        </div>
+        <form class="form">
+            <label for='name'>Name</label>
+            <input type='text' id='fname' name='name'>
+            <label for='user-name'><span class="required">* </span>Username</label>
+            <input type='text' id='username' name='username'>
+            <label for='password'><span class="required">* </span>Password</label>
+            <input type='text' id='password' name='password'><br>
+            <a href="/jokes" id="sign-up-btn" class='btn btn-primary' type='submit'>Create Dad</a>
+        </form>
+        <!-- Creating the Modal for the sign in-->
+        <div id="id01" class="modal">
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                    <img class="login-logo" src="../images/icons/blackIcons/logoBK.png" alt="Avatar" class="avatar">
+                </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+                <div class="form">
+                    <label class="lbl" for='user-name'><span class="required">* </span>Username</label>
+                    <input class="lbl" id='username' type='text' name='username'>
+                    <label class="lbl" for='password'><span class="required">* </span>Password</label>
+                    <input class="lbl" id='password' type='text' name='password'>
+                    <a href="/profile" class='modal-btn btn btn-primary' type="submit">Login</a>
+                </div>
 
+<<<<<<< HEAD
 <body>
     <header>
         <button class="login"> Login</button>
@@ -25,3 +56,24 @@
 </body>
 
 </html>
+=======
+                <div class="form-container">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+>>>>>>> f32daede85d8ed6841794fc467d0ca479910e4e7

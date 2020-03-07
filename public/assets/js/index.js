@@ -9,3 +9,7 @@ function changeImage() {
         document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/like.png";
     }
 }
+//  click events
+
+// API calls
+console.log("HELLOOOO");
