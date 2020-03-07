@@ -10,18 +10,26 @@
 
 <body>
     <!-- Append all the joke divs to the results section -->
-    <div class="row">
-        <div class="col-sm-12">
-            <br>
-            <div class="card">
-                <div class="card-header">
-                    <strong> Read It, Save It, Share It </strong>
-                </div>
-                <div class="card-body" id="results-section">
-                </div>
+    <div class="container center">
+        <div class=" main-container">
+            <!-- log in link -->
+            <div class="log-in-container">
+                <a href="#" onclick="document.getElementById('id01').style.display='block'" class="log-in">Login</a>
             </div>
-        </div>
-    </div>
-</body>
+            <!-- logo container -->
+            <div class="logo-div">
+                <img id="signup-logo" src="../images/icons/blackIcons/logoBK.png" alt="dad life">
+            </div>
+            <!-- headdings and form -->
+            <div class="heading-container">
+                <p class="heading">Read it, Save it, Share it</p>
+                <p class="heading">Sign up or login</p>
+            </div>
+            <form action="/action_page.php" id="usrform">
+                Name: <input type="text" name="usrname">
+                <input type="submit">
+            </form>
+
+            <textarea name="comment" form="usrform">Enter text here...</textarea>
 
 </html>
