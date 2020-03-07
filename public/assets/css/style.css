@@ -55,22 +55,17 @@ font-family: Helvetica, Arial, sans-serif;
     right:0px;
 }
 
-<<<<<<< HEAD
-=======
 .center {
     margin: auto;
     text-align: center;
 }
 
->>>>>>> 66161c76c089aaf9065f3007b35d2f3561a8778f
 .form {
     margin: auto;
 }
 
-<<<<<<< HEAD
-=======
 img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     height: 200px;
     width: 200px;
 }
@@ -90,7 +85,6 @@ img {
     color: white;
     text-align: center;
 }
->>>>>>> 66161c76c089aaf9065f3007b35d2f3561a8778f
 .log-in:hover{
     text-decoration: none;
     color: #13c0e0;
@@ -177,3 +171,4 @@ img {
     to {transform: scale(1)}
   }
   /* ============================== end of login and signup page ========================== */
+

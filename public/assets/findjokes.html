@@ -4,32 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Find Jokes</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- Append all the joke divs to the results section -->
+    <button class="logOut">Log Out</button>
+
     <div class="container center">
-        <div class=" main-container">
-            <!-- log in link -->
-            <div class="log-in-container">
-                <a href="#" onclick="document.getElementById('id01').style.display='block'" class="log-in">Login</a>
-            </div>
-            <!-- logo container -->
-            <div class="logo-div">
-                <img id="signup-logo" src="../images/icons/blackIcons/logoBK.png" alt="dad life">
-            </div>
-            <!-- headdings and form -->
+
+        <div class="jumbotron center">
             <div class="heading-container">
                 <p class="heading">Read it, Save it, Share it</p>
-                <p class="heading">Sign up or login</p>
             </div>
-            <form action="/action_page.php" id="usrform">
-                Name: <input type="text" name="usrname">
-                <input type="submit">
-            </form>
+        </div>
+        <div class="joke-container">
+            <div class=img-container>
+                <img src="../images/icons/blackIcons/jokesInUse.png" alt="">
+            </div>
+            <div class="joke-div">
+                <p id="joke"></p>
+            </div>
+        </div>
 
-            <textarea name="comment" form="usrform">Enter text here...</textarea>
+
+
+        <div class="footer">
+            <button class='col-md-4'> button with icon for profile</button>
+            <button class="col-md-4">button with icon for jokes</button>
+            <button class="col-md-4">button with icon for community</button>
+        </div>
+
+</body>
 
 </html>
+
+<!-- <form class="form"><button href=''>Favorite</button></form> -->
+
+<!--<img id="signup-logo" src="../images/icons/blackIcons/jokesInUse.png" alt="dad life">
