@@ -5,9 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="../assets/js/index.js"></script>
+
 </head>
 
 <body>
+
+    <div class="headerr">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><img class='logo' src='../images/icons/blackIcons/logoBK.png'></div>
+        <div class="col-md-2"></div>
+        <a class='col-md-2 btn logOut' href='#'><img class='profIconSize '
+                src='../images/icons/blackIcons/Asset 9.png'></a>
+    </div>
+
+    <div class=" container center card-section">
+
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">User:</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+
+                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
+                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
+                    onclick="changeImage()">
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">User:</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+
+                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
+                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
+                    onclick="changeImage()">
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">User:</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+
+                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
+                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
+                    onclick="changeImage()">
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">User:</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+
+                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
+                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
+                    onclick="changeImage()">
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">User:</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+
+                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
+                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
+                    onclick="changeImage()">
+
+            </div>
+        </div>
+
+        <div class="footer">
+
+            <button class='col-md-4 btn-primary'><a><img class='profIconSize'
+                        src='../images/icons/whiteIcons/profile.png'></a></button>
+
+            <button class="col-md-4 btn-primary"><a href=''><img class='profIconSize'
+                        src='../images/icons/whiteIcons/jokes.png'> </a></button>
+
+            <button class="col-md-4 btn-primary"><img class='profIconSize' src='../images/icons/whiteIcons/moments.png'>
+                </a></button>
+
+        </div>
+    </div>
+
+
+    <script> // all of the Jquery and JS for the html in here
+
+        function changeImage() {
+
+            if (document.getElementById("imgClickAndChange").src == "/public/images/icons/blackIcons/like.png") {
+                document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/liked.png"
+            }
+            else {
+                document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/like.png";
+            }
+        }
+        //  click events
+
+        // API calls
+        console.log("HELLOOOO");
+
+    </script>
 
 </body>
 
