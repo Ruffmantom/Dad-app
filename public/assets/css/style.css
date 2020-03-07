@@ -1,42 +1,52 @@
-.right {
-    float: right !important;
-}
+/* colors */
+/* 
+#0f133b = dk blue
+#13c0e0 = lt blue
+#c42654 = lt pink
+*/
+/* fonts */
+/* 
+font-family: Helvetica, Arial, sans-serif;
 
-.header {
-    top: 0;
-    right: 0;
-}
-
-.login {
-    color: black;
-    border: 1px, 1px, 1px, 1px;
-    border-style: double;
-}
-
-.jumbotron {
-    align-self: center !important;
-    border-top: solid white 25px;
-    width: 500px !important;
+*/
+/* ==================== index "login and sign up page" ==================== */
+.main-container { 
     text-align: center !important;
-}
-
-.txtbox {
-    align-content: center;
-    margin: center;
+    padding: 10px 0 50px 0 !important;
+    
 }
 .container {
     border-top: solid white 25px;
 }
-.center {
-    margin: auto;
 
-}
-form {
+.form {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    align-content: center;
+    width: 40%;
     text-align: center;
+    margin: auto;
+}
+.required{
+    color: #c42654;
+}
+.btn-primary{
+    background:#13c0e0 !important;
+    border: none !important;
+    border-radius: 10px !important;
+}
+/* log-in link */
+.log-in-container{
+    text-align: right;
+    padding-right: 20px;
+    margin-bottom: 30px;
+}
+.log-in{
+    color: black;
+    text-decoration: none;
+    margin: 0;
+    position: relative;
+    top: 0px;
+    right:0px;
 }
 
 .form {
@@ -58,3 +68,89 @@ img {
     color: white;
     text-align: center;
 }
+.log-in:hover{
+    text-decoration: none;
+    color: #13c0e0;
+}
+/* logo */
+.logo-div{
+    width: 18%;
+    margin: 0 auto;
+}
+#signup-logo{
+    height: auto;
+    width: 100%;
+}
+/* headings and form */
+.heading-container{
+    padding: 30px 0;
+}
+.heading{
+    font-size: 23px;
+    margin: 0;
+}
+/* ==================== the modal styles ======================= */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  .imgcontainer{
+    width: 18%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+  .login-logo{
+    height: auto;
+    width: 100%;
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    width: 98%; /* Could be more or less, depending on screen size */
+    padding: 30px 0 30px 0;
+  }
+  .modal-btn{
+      margin: 20px 0;
+  }
+  .lbl{
+      margin:0;
+      padding: 10px 0;
+  }
+  .cancelbtn{
+      background-color: lightgrey;
+      border-radius: 10px;
+      border: none;
+      padding: 5px 20px;
+  }
+  .cancelbtn:hover{
+      background-color: #c42654;
+      color: white;
+  }
+
+   
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+  /* ============================== end of login and signup page ========================== */
