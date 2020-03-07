@@ -42,3 +42,19 @@ form {
 .form {
     margin: auto;
 }
+
+img {
+    border-radius: 50%;
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
