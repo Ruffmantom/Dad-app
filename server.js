@@ -16,20 +16,23 @@ app.use(express.json());
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
-require("./routes/api-routes.js")(app);
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+// Set the routes for the db
+require("./routes/api-routes.js")(app);
+// html routes
+var routes = require("./routes/html-routes.js");
 
-// Import routes and give the server access to them.
-var routes = require("./controllers/dadController");
+
+
+
 
 app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
 // syncing our sequelize models and then starting our express app
 // ==============================================================
-db.sequelize.sync({ force: true }).then(function () {
+db.sequelize.sync({ force: false }).then(function () {
     app.listen(PORT, function () {
         // Log (server-side) when our server has started
         console.log("Server listening on: http://localhost:" + PORT);
