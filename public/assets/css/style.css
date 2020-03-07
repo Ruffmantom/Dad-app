@@ -15,6 +15,12 @@ font-family: Helvetica, Arial, sans-serif;
     padding: 10px 0 50px 0 !important;
     
 }
+
+.logOut{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
 .container {
     border-top: solid white 25px;
 }
@@ -49,11 +55,22 @@ font-family: Helvetica, Arial, sans-serif;
     right:0px;
 }
 
+.center {
+    margin: auto;
+    text-align: center;
+}
+
 .form {
     margin: auto;
 }
 
 img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+.profimg {
+    
     border-radius: 50%;
 }
 
