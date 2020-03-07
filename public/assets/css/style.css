@@ -87,6 +87,7 @@ font-family: Helvetica, Arial, sans-serif;
     /* opacity: 50%; */
     color: white;
     text-align: center;
+    z-index: 100;
 }
 
 img {
@@ -120,6 +121,7 @@ img {
     /* background-color: red; */
     color: white;
     text-align: center;
+    z-index: 100;
 }
 .log-in:hover{
     text-decoration: none;
@@ -207,3 +209,10 @@ img {
     to {transform: scale(1)}
   }
   /* ============================== end of login and signup page ========================== */
+
+  .card {
+    margin: 0 auto;
+  }
+  .card-section {
+      margin-top: 100px;
+  }
