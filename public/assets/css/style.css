@@ -16,6 +16,7 @@ font-family: Helvetica, Arial, sans-serif;
     
 }
 
+
 .logOut{
     position: fixed;
     top: 0;
@@ -38,7 +39,7 @@ font-family: Helvetica, Arial, sans-serif;
 .btn-primary{
     background:#13c0e0 !important;
     border: none !important;
-    border-radius: 10px !important;
+    /* border-radius: 10px !important; */
 }
 /* log-in link */
 .log-in-container{
@@ -64,8 +65,26 @@ font-family: Helvetica, Arial, sans-serif;
     margin: auto;
 }
 
+.whtspc {
+    background-color: white;
+
+}
+
+.headerr {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 12%;
+    background-color: red;
+    /* opacity: 50%; */
+    color: white;
+    text-align: center;
+}
+
 img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     height: 200px;
     width: 200px;
 }
@@ -74,14 +93,25 @@ img {
     border-radius: 50%;
 }
 
+
+.profIconSize {
+    height: 60px;
+    width: 60px;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+}
+
 .footer {
     display: flex;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 8%;
-    background-color: red;
+    height: 12%;
+    /* background-color: red; */
     color: white;
     text-align: center;
 }
