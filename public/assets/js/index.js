@@ -13,7 +13,7 @@ const loginPassword = $("#login-password");
 
 $(document).ready(function () {
     //  click events
-    // sign up form
+    // sign up form ========================================================
     signUpForm.submit(function (event) {
         event.preventDefault();
         var userData = {
@@ -30,7 +30,9 @@ $(document).ready(function () {
         name.val("");
         userName.val("");
         password.val("");
-
+        // redirect to the jokes
+        console.log("reassinging jokes")
+        location.assign("/jokes");
     });
 
     function signUpUser(name, username, password) {
@@ -38,11 +40,7 @@ $(document).ready(function () {
             name: name,
             userName: username,
             password: password
-        }).then(function (data) {
-            // redirect to the profile
-            // window.location.replace("/profile");
-        })
-            .catch(handleLoginErr);
+        }).catch(handleLoginErr);
         // creating a function for catching the error
         // If there's an error, handle it by throwing up a bootstrap alert
         function handleLoginErr(err) {
@@ -50,18 +48,34 @@ $(document).ready(function () {
             $("#alert").fadeIn(500);
         }
     }
-    // sign in form
+
+
+    // sign in form ===========================================================
     signInForm.submit(function (event) {
         event.preventDefault();
         var userData = {
             userName: userName.val().trim(),
             password: password.val().trim()
         };
-        if (!userData.username || userData.password) {
+        if (!userData.username || !userData.password) {
             return;
         };
-        // setting feilds 
+        signIn(userData.userName, userData.password);
+        // resetting feilds
+        loginUsername.val("");
+        loginPassword.val("");
+        //  redirect to profile
+        location.assign("/profile");
     });
+    // to actualy sign in
+    function signIn(username, password) {
+        $.post("api/login", {
+            userName: userName,
+            password: password
+        }).catch(function (err) {
+            console.log(err);
+        })
+    }
 
     // this bottom is for the document.ready
 })
