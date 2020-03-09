@@ -37,71 +37,23 @@ module.exports = function (app) {
   app.get("/logout", function (req, res) {
     req.logout();
     res.redirect("/");
+    console.log("logged out")
   });
 
   // Route for getting some data about our user to be used client side
-  app.get("/api/user_data", function (req, res) {
-    if (!req.user) {
+  app.get("/api/userprofile", function (req, res) {
+    if (!req.User) {
       // The user is not logged in, send back an empty object
       res.json({});
     } else {
+
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
-        email: req.user.email,
-        id: req.user.id
+        userName: req.User.userName,
+        id: req.User.id
       });
     }
   });
-  // ============================================================================================
-  // // GET route for getting all of the todos
-  // app.get("/api/todos", function (req, res) {
-  //   // findAll returns all entries for a table when used with no options
-  //   db.Todo.findAll({}).then(function (dbTodo) {
-  //     // We have access to the todos as an argument inside of the callback function
-  //     res.json(dbTodo);
-  //   });
-  // });
 
-  // // POST route for saving a new todo
-  // app.post("/api/todos", function (req, res) {
-  //   // create takes an argument of an object describing the item we want to
-  //   // insert into our table. In this case we just we pass in an object with a text
-  //   // and complete property (req.body)
-  //   db.Todo.create({
-  //     text: req.body.text,
-  //     complete: req.body.complete
-  //   }).then(function (dbTodo) {
-  //     // We have access to the new todo as an argument inside of the callback function
-  //     res.json(dbTodo);
-  //   })
-  //     .catch(function (err) {
-  //       // Whenever a validation or flag fails, an error is thrown
-  //       // We can "catch" the error to prevent it from being "thrown", which could crash our node app
-  //       res.json(err);
-  //     });
-  // });
-
-
-  // // PUT route for updating todos. We can get the updated todo data from req.body
-  // app.put("/api/todos", function (req, res) {
-
-  //   // Update takes in an object describing the properties we want to update, and
-  //   // we use where to describe which objects we want to update
-  //   db.Todo.update({
-  //     text: req.body.text,
-  //     complete: req.body.complete
-  //   }, {
-  //     where: {
-  //       id: req.body.id
-  //     }
-  //   }).then(function (dbTodo) {
-  //     res.json(dbTodo);
-  //   })
-  //     .catch(function (err) {
-  //       // Whenever a validation or flag fails, an error is thrown
-  //       // We can "catch" the error to prevent it from being "thrown", which could crash our node app
-  //       res.json(err);
-  //     });
-  // });
 };
