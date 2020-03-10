@@ -11,7 +11,7 @@ var passport = require("../config/passport");
 module.exports = function (app) {
   // code from 14-homework for validating the hashed password
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    res.json(req.user);
+    res.json(req.User);
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
