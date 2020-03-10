@@ -7,7 +7,10 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 // Create all our routes and set up logic within those routes where required.
 // getting the sign up/ sign in page loaded up
 router.get("/", function (req, res) {
-  // console.log("working");
+  // If the user already has an account send them to the members page
+  if (req.User) {
+    res.render("profile");
+  }
   res.render("index");
 
 });
@@ -21,7 +24,8 @@ router.get("/community", function (req, res) {
 });
 // get the user profile page
 // if user has been made
-router.get("/login", isAuthenticated, function (req, res) {
+// here is the problem.. this route needs to be "login" like the hw from 14 but it only works when I use profile
+router.get("/profile", function (req, res) {
   // If the user already has an account send them to the profile page
   if (req.user) {
     res.redirect("/profile");

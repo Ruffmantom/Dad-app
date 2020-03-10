@@ -26,24 +26,24 @@
         <!-- Creating the Modal for the sign in-->
         <div id="id01" class="modal">
             <!-- Modal Content -->
-            <form class="modal-content animate" action="/profile">
+            <div class="modal-content animate" action="/profile">
                 <div class="imgcontainer">
                     <img class="login-logo" src="../images/icons/blackIcons/logoBK.png" alt="Avatar" class="avatar">
                 </div>
 
-                <div id="sign-in-form" class="form">
+                <form id="sign-in-form" class="form">
                     <label class="lbl" for='user-name'><span class="required">* </span>Username</label>
                     <input class="lbl" id='login-username' type='text' name='username'>
                     <label class="lbl" for='password'><span class="required">* </span>Password</label>
                     <input class="lbl" id='login-password' type='password' name='password'>
                     <input id="sign-in" class='modal-btn btn btn-primary' type="submit"></input>
-                </div>
+                </form>
 
                 <div class="form-container">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'"
                         class="cancelbtn">Cancel</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
