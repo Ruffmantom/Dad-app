@@ -226,3 +226,17 @@ img {
   .card-section {
       margin-top: 100px;
   }
+  .joke-container {
+      padding-bottom: 20px;
+      padding-top: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+  }
+  .joke-div {
+      border: solid;
+      border-color: lightgrey;
+  }
+  .add {
+      width: 20px;
+      height: 20px;
+  }
