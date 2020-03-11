@@ -12,7 +12,6 @@ module.exports = function (sequelize, dataTypes) {
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         }
-
     }, {});
     Moments.associate = function (models) {
         Moments.belongsTo(models.User, {
@@ -21,6 +20,5 @@ module.exports = function (sequelize, dataTypes) {
             }
         })
     };
-
     return Moments;
 };
