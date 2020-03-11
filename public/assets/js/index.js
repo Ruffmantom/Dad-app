@@ -1,6 +1,6 @@
 // all of the Jquery and JS for the html in here
-const signUpForm = $("#sign-up-form");
-const signInForm = $("#sign-in-form");
+const signUpForm = $("form#sign-up-form");
+const logInForm = $("form#sign-in-form");
 // buttons
 const logIn = $("#sign-in");
 const signUp = $("#sign-up-btn");
@@ -53,16 +53,16 @@ $(document).ready(function () {
 
 
     // sign in form ===========================================================
-    signInForm.submit(function (event) {
+    logInForm.submit(function (event) {
         event.preventDefault();
         var userData = {
-            userName: userName.val().trim(),
-            password: password.val().trim()
+            uN: loginUsername.val().trim(),
+            pass: loginPassword.val().trim()
         };
-        if (!userData.username || !userData.password) {
+        if (!userData.uN || !userData.pass) {
             return;
         };
-        signIn(userData.userName, userData.password);
+        signIn(userData.uN, userData.pass);
         // resetting feilds
         loginUsername.val("");
         loginPassword.val("");
@@ -71,8 +71,8 @@ $(document).ready(function () {
     });
     // to actualy sign in
     function signIn(username, password) {
-        $.post("api/login", {
-            userName: userName,
+        $.post("/api/login", {
+            userName: username,
             password: password
         }).catch(function (err) {
             console.log(err);
@@ -99,5 +99,3 @@ $(document).ready(function () {
     //this is used for updating jokes
     // this bottom is for the document.ready
 })
-
-
