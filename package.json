@@ -18,14 +18,10 @@
   },
   "homepage": "https://github.com/Ruffmantom/Dad-app#readme",
   "dependencies": {
-<<<<<<< HEAD
     "bcrypt-nodejs": "0.0.3",
-    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
-=======
     "bcryptjs": "^2.4.3",
->>>>>>> master
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.17.0",
