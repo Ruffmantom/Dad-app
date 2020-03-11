@@ -11,7 +11,7 @@ module.exports = {
   "test": {
     "username": "root",
     "password": process.env.MYSQL_PASSWORD,
-    "database": "database_test",
+    "database": "dadDB",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql",
@@ -20,7 +20,7 @@ module.exports = {
   "production": {
     "username": "root",
     "password": process.env.MYSQL_PASSWORD,
-    "database": "database_production",
+    "database": "dadDB",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql",
