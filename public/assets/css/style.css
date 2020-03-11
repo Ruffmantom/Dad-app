@@ -10,17 +10,23 @@ font-family: Helvetica, Arial, sans-serif;
 
 */
 /* ==================== index "login and sign up page" ==================== */
+
+
 .main-container { 
     text-align: center !important;
     padding: 10px 0 50px 0 !important;
     
 }
-
+.jumbotron {
+    background-color: white !important;
+}
 
 .logOut{
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
+    float: right;
+    z-index: 3;
 }
 .container {
     border-top: solid white 25px;
@@ -39,7 +45,7 @@ font-family: Helvetica, Arial, sans-serif;
 .btn-primary{
     background:#13c0e0 !important;
     border: none !important;
-    /* border-radius: 10px !important; */
+    border-radius: 50px 50px 50px 50px !important;
 }
 /* log-in link */
 .log-in-container{
@@ -81,13 +87,14 @@ font-family: Helvetica, Arial, sans-serif;
     position: fixed;
     top: 0;
     right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
-    height: 12%;
-    background-color: red;
+    height: auto;
+    background-color:#0f133b;
     /* opacity: 50%; */
     color: white;
     text-align: center;
-    z-index: 100;
 }
 
 img {
@@ -109,16 +116,19 @@ img {
 .logo {
     height: 60px;
     width: 60px;
+    margin-left: 76.2px;
 }
 
-.footer {
+.footers {
     display: flex;
     position: fixed;
     left: 0;
     bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
-    height: 12%;
-    /* background-color: red; */
+    height: auto;
+    background-color: #0f133b;
     color: white;
     text-align: center;
     z-index: 100;
