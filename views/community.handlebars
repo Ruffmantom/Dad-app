@@ -11,11 +11,11 @@
 
     <!-- cards for injecting from table -->
 
-    {{#each Moments}}
+    {{#each momentsTable}}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">User: {{this.userName}}</h6>
-            <p class="card-text">{{this.moments}}</p>
+            <h6 class="card-subtitle mb-2 text-muted">User: {{momentsTable.userName}}</h6>
+            <p class="card-text">{{momentsTable.moments}}</p>
 
             <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
             <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" onclick="changeImage()">
@@ -52,6 +52,6 @@
     //  click events
 
     // API calls
-    console.log("HELLOOOO");
+
 
 </script>

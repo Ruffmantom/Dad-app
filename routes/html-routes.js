@@ -1,5 +1,5 @@
 var express = require("express");
-
+const db = require("../models");
 var router = express.Router();
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -21,6 +21,18 @@ router.get("/jokes", function (req, res) {
 // get the community page
 router.get("/community", function (req, res) {
   res.render("community");
+});
+// getting all the data
+router.get("/api/moments", function (req, res) {
+  db.Moments.findAll(function (data) {
+    console.log("about to find all")
+    var hbsObject = {
+      momentsTable: data
+    };
+    console.log("------------- the hbsObject ----------");
+    console.log(hbsObject);
+    res.render("community", hbsObject);
+  });
 });
 // get the user profile page
 // if user has been made
