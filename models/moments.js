@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    var Moments = sequelize.define('moments', {
+    var Moments = sequelize.define('Moments', {
         // making the table here
         userName: dataTypes.STRING,
         moments: dataTypes.STRING,
