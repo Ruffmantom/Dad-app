@@ -37,5 +37,15 @@ router.get("/api/community", function (req, res) {
         res.json(dbPost);
     });
 });
+router.get("/community", function (req, res) {
+    db.Moments.selectAll(function (data) {
+        var hbsObject = {
+            Moments: data
+        };
+        console.log("------------- the hbsObject ----------");
+        console.log(hbsObject);
+        res.render("community", hbsObject);
+    });
+});
 
 module.exports = router;

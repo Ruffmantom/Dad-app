@@ -10,28 +10,19 @@
 <div class=" container center card-section">
 
     <!-- cards for injecting from table -->
+
+    {{#each Moments}}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">User:</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
+            <h6 class="card-subtitle mb-2 text-muted">User: {{this.userName}}</h6>
+            <p class="card-text">{{this.moments}}</p>
 
             <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
             <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" onclick="changeImage()">
 
         </div>
     </div>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">User:</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-
-            <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-            <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" onclick="changeImage()">
-
-        </div>
-    </div>
+    {{/each}}
 
 
     <!--buttons for switching pages-->

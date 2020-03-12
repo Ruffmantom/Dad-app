@@ -13,9 +13,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    dadLevel: {
-      type: DataTypes.INTEGER
-    },
     createdAt: {
       type: 'TIMESTAMP',
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
@@ -27,13 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     }
   });
-  User.associate = function (models) {
-    // Associating User with Moments
-    // When an User is deleted, also delete any associated Posts
-    User.hasMany(models.moments, {
-      // onDelete: "cascade"
-    });
-  };
+
 
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function (password) {

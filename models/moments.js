@@ -13,15 +13,7 @@ module.exports = function (sequelize, dataTypes) {
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         }
-    }, {});
-    Moments.associate = function (models) {
-        // We're saying that a Post should belong to an Author
-        // A Post can't be created without an Author due to the foreign key constraint
-        Moments.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+    });
+
     return Moments;
 };
