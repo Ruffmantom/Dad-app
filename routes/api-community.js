@@ -20,6 +20,15 @@ router.post("/api/moments", function (req, res) {
                 message: "Moment was posted!"
             })
         })
+    db.Moments.findAll(function (data) {
+        console.log("about to find all")
+        var hbsObject = {
+            momentsTable: data
+        };
+        console.log("------------- the hbsObject ----------");
+        console.log(hbsObject);
+        res.render("community", hbsObject);
+    });
 });
 // route for getting all the moments from the moments table
 router.get("/api/community", function (req, res) {
