@@ -3,12 +3,12 @@
 
     <div class="center"><img class='logo' src='../images/icons/whiteIcons/logoWT.png'></div>
 
-    <a class='btn logOut' href='#'><img class='profIconSize' src='../images/icons/whiteIcons/whiteLogout.png'></a>
+    <a class='btn logOut' href='/logout'><img class='profIconSize' src='../images/icons/whiteIcons/whiteLogout.png'></a>
 
 </div>
 <div class="container center">
     <div class="jumbotron center">
-        <div class="dadPoints">Dad Points: <span class=''>0</span></div><br>
+        <div class="dadPoints">Dad Points: <span class=''>{{User.dadLevel}}</span></div><br>
         <div>
             <img class='profimg'
                 src="https://m.media-amazon.com/images/M/MV5BNDRkOWIyOTUtMjg5YS00OTJjLTgwNGYtMjgxMTA0NWQ2NGI3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SY1000_CR0,0,666,1000_AL_.jpg">
@@ -16,12 +16,13 @@
         <a href="https://www.google.com" class='changeProfPic'>Change profile picture</a>
         <!--name portion-->
         <br><br>
-        <h4 class="center">{{name}}</h4>
+        {{!-- putting placeholder text for the Username --}}
+        <h4 id="dad-username" class="center">Dadbod21</h4>
         <!--dad points with span element on unique number-->
-        <form class="form">
-            <label for='dadmmnt'>Post a joke, Share a dad moment:</label>
-            <input type='text' id='dadmmnt' name='dadmmnt'><br>
-            <button class='btn-primary' href='./community.handlebars'>Share</button><br><br>
+        <h4 class="post-a-moment">Post a joke, Share a dad moment</h4>
+        <form class="moment-form">
+            <input type='text' id='dadmmnt' name='moments'></input><br><br>
+            <input type="submit" class='btn-primary'></input><br><br>
         </form>
     </div>
 </div>
@@ -35,3 +36,34 @@
     <a class='col-md-4' style="background-color: #0f133b;" href="/profile"><img class='profIconSize'
             src='../images/icons/whiteIcons/profile.png'></a>
 </div>
+<script>
+    const momentForm = $(".moment-form");
+    // input box
+    const dadmmnt = $("#dadmmnt");
+    const dadUsername = $("#dad-username");
+
+
+    $(document).ready(function () {
+        momentForm.submit(function (event) {
+            event.preventDefault();
+            var post = {
+                moment: dadmmnt.val().trim(),
+                username: dadUsername.html().trim()
+            };
+            console.log(post);
+            $.ajax("/api/moments", {
+                type: "POST",
+                data: post
+            }).then(function (res) {
+                console.log(res);
+                dadmmnt.val("");
+                location.redirect('/community')
+            }).catch(function (err) {
+                console.log(err);
+            })
+        });
+    });
+
+
+
+</script>
