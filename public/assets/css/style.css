@@ -7,7 +7,6 @@
 /* fonts */
 /* 
 font-family: Helvetica, Arial, sans-serif;
-
 */
 /* ==================== index "login and sign up page" ==================== */
 
@@ -90,13 +89,12 @@ font-family: Helvetica, Arial, sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
-    height: 12%;
-    background-color: #0f133b;
     height: auto;
     background-color:#0f133b;
     /* opacity: 50%; */
     color: white;
     text-align: center;
+    z-index: 20;
 }
 
 img {
@@ -150,11 +148,10 @@ img {
 }
 /* headings and form */
 .heading-container{
-    padding: 40px 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 0;
 }
 .heading{
-font-size: 60px;
+    font-size: 23px;
     margin: 0;
 }
 /* ==================== the modal styles ======================= */

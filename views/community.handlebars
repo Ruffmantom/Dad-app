@@ -16,8 +16,7 @@
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
 
-            <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-            <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" onclick="changeImage()">
+            <img src="../images/icons/blackIcons/like.png" id="like" class='heart'>
 
         </div>
     </div>
@@ -35,12 +34,12 @@
 
 
     <!-- footer -->
-    <div class="footer">
-        <a class="col-md-4 btn-primary" href="/jokes"><img class='profIconSize'
+    <div class="footers">
+        <a class="col-md-4" style="background-color: #0f133b;" href="/jokes"><img class='profIconSize'
                 src='../images/icons/whiteIcons/jokes.png'></a>
-        <a class="col-md-4 btn-primary" href="/community"><img class='profIconSize'
+        <a class="col-md-4" style="background-color: #0f133b;" href="/community"><img class='profIconSize'
                 src='../images/icons/whiteIcons/moments.png'></a>
-        <a class='col-md-4 btn-primary' href="/profile"><img class='profIconSize'
+        <a class='col-md-4' style="background-color: #0f133b;" href="/profile"><img class='profIconSize'
                 src='../images/icons/whiteIcons/profile.png'></a>
     </div>
 </div>
@@ -53,13 +52,17 @@
         if (document.getElementById("imgClickAndChange").src == "/public/images/icons/blackIcons/like.png") {
             document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/liked.png"
         }
-        else {
-            document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/like.png";
-        }
     }
     //  click events
 
     // API calls
     console.log("HELLOOOO");
+
+    document.querySelector('.heart').addEventListener('click', function () {
+        if (this.getAttribute('src') == "../images/icons/blackIcons/like.png") {
+            this.setAttribute("src", "../images/icons/blackIcons/liked.png");
+        }
+
+    })
 
 </script>
