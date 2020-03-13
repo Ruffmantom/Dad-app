@@ -79,6 +79,9 @@ $(document).ready(function () {
         })
     }
 
+
+   
+
     // function updatePage() {
     //     var joke = joke.joke;
     //     $jokeContainer.append(
@@ -95,6 +98,7 @@ $(document).ready(function () {
     //     }).then(updatePage);
     // };
     // findJoke();
+
 
     //this is used for updating jokes
     // this bottom is for the document.ready

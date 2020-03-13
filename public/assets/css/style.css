@@ -7,7 +7,6 @@
 /* fonts */
 /* 
 font-family: Helvetica, Arial, sans-serif;
-
 */
 /* ==================== index "login and sign up page" ==================== */
 
@@ -95,6 +94,7 @@ font-family: Helvetica, Arial, sans-serif;
     /* opacity: 50%; */
     color: white;
     text-align: center;
+    z-index: 20;
 }
 
 img {
@@ -229,12 +229,23 @@ img {
   .joke-container {
       padding-bottom: 20px;
       padding-top: 20px;
+
       padding-left: 40px;
       padding-right: 40px;
+
   }
   .joke-div {
       border: solid;
       border-color: lightgrey;
+      width: 150px;
+      height: 150px;
+  }
+  .add {
+      width: 40px;
+      height: 40px;
+      margin: auto;
+      display: flex;
+
   }
   .add {
       width: 20px;
