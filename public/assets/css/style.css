@@ -210,6 +210,9 @@ body{
       margin-top: 25px;
       margin-bottom: 180px;
   }
+  .created-at{
+      font-size: 6px;
+  }
 
   .heart-div{
     width: 100%;
