@@ -18,8 +18,9 @@
             <img src="../images/icons/blackIcons/jokesInUse.png" alt="">
         </div>
         <div class="joke-div">
-            <p id="joke"></p>
+
         </div>
+
     </div>
 </div>
 <!-- footer -->
@@ -32,3 +33,46 @@
     <a class='col-md-4 btn-primary' href="/profile"><img class='profIconSize'
             src='../images/icons/whiteIcons/profile.png'></a>
 </div>
+<script> // all of the Jquery and JS for the html in here
+
+    $(document).ready(function () {
+        jokeSearch();
+        function changeImage() {
+
+            if (document.getElementById("imgClickAndChange").src == "/public/images/icons/blackIcons/like.png") {
+                document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/liked.png"
+            }
+            else {
+                document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/like.png";
+            }
+        }
+
+
+        //AJAX call for user search/keyword
+        function jokeSearch() {
+            var queryURL = "https://icanhazdadjoke.com/slack";
+            var jokesArr = [];
+
+            for (var i = 0; i < 10; i++) {
+                $.ajax({
+                    url: queryURL,
+                    method: "GET"
+                }).then(function (response) {
+                    jokesArr.push(response.attachments[0].text);
+                    console.log(response.attachments[0].text);
+                    $(".joke-div").append("<p>" + response.attachments[0].text + "<button> Save Joke ➕</button> </p>")
+
+
+                })
+            }
+
+        }
+
+
+    });
+
+
+
+
+
+</script>

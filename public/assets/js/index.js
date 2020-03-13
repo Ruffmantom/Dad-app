@@ -11,7 +11,7 @@ const password = $("#password");
 const loginUsername = $("#login-username");
 const loginPassword = $("#login-password");
 
-const jokeContainer = $("<div class='joke-container'>")
+//const jokeContainer = $("<div class='joke-container'>")
 
 $(document).ready(function () {
     //  click events
@@ -79,23 +79,8 @@ $(document).ready(function () {
         })
     }
 
-    function updatePage() {
-        var joke = joke.joke;
-        $jokeContainer.append(
-            "<div class'joke-div'>" +
-            joke +
-            "</div>"
-        );
-    };
-    function findJoke() {
-        var url = "https://icanhazdadjoke.com/?accept=application/json/search"
-        $.ajax({
-            url: url,
-            method: "GET"
-        }).then(updatePage);
-    };
-    findJoke();
 
-    //this is used for updating jokes
+
+
     // this bottom is for the document.ready
 })
