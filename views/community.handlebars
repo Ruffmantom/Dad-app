@@ -16,8 +16,7 @@
             <h6 class="card-subtitle mb-2 text-muted">User: {{this.userName}}</h6>
             <p class="card-text">{{this.moments}}</p>
             <div class="heart-div">
-                <img src="../images/icons/blackIcons/like.png" id="like" style="display: inline;" class='heart'>
-                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" class='heart'>
+                <img src="../images/icons/blackIcons/like.png" class="like" style="display: inline;" id='heart'>
             </div>
         </div>
     </div>
@@ -43,21 +42,14 @@
 
 
 <script> // all of the Jquery and JS for the html in here
-    var like = $("#like");
-    var liked = $("#liked");
+
+    var like = $(".like");
     $(document).ready(function () {
-        like.on('click', function () {
-            like.css({ "display": "none" });
-            liked.css({ "display": "inline" });
 
+        $(like).click(function () {
+            // Change src attribute of image
+            $(this).attr("src", "../images/icons/blackIcons/liked.png");
         });
-
     });
-
-
-
-
-
-
 
 </script>

@@ -217,7 +217,7 @@ body{
     text-align: right;
     /* display: flex; */
   }
-  .heart{
+  #heart{
       height: 100%;
       width: auto;
   }
