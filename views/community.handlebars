@@ -17,7 +17,6 @@
             <p class="card-text">{{this.moments}}</p>
             <div class="heart-div">
                 <img src="../images/icons/blackIcons/like.png" class="like" style="display: inline;" id='heart'>
-                {{!-- <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" class='heart'> --}}
             </div>
         </div>
     </div>
@@ -45,7 +44,6 @@
 <script> // all of the Jquery and JS for the html in here
 
     var like = $(".like");
-    var liked = $("#liked");
     $(document).ready(function () {
 
         $(like).click(function () {
