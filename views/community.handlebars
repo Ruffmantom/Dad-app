@@ -14,8 +14,8 @@
     {{#each momentTable}}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">User: {{userName}}</h6>
-            <p class="card-text">{{moments}}</p>
+            <h6 class="card-subtitle mb-2 text-muted">User: {{this.userName}}</h6>
+            <p class="card-text">{{this.moments}}</p>
 
             <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
             <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" onclick="changeImage()">

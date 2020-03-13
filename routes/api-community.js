@@ -25,9 +25,10 @@ router.post("/api/moments", function (req, res) {
 });
 
 // route for getting all the moments from the moments table
-router.get('/api/moments', (req, res) =>
-    db.Moments.findAll()
+router.get('/community', (req, res) =>
+    db.Moments.findAll({ raw: true })
         .then(momentTable => {
+            console.log(momentTable);
             res.render('community', {
                 momentTable
             });

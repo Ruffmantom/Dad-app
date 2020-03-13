@@ -19,10 +19,10 @@ router.get("/jokes", function (req, res) {
   res.render("jokes");
 });
 // get the community page
-router.get("/community", function (req, res) {
+// router.get("/community", function (req, res) {
 
-  res.render("community");
-});
+//   res.render("community");
+// });
 // // getting all the data
 // router.get("/api/moments", function (req, res) {
 
