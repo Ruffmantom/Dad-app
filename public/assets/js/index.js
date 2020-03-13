@@ -33,7 +33,7 @@ $(document).ready(function () {
         userName.val("");
         password.val("");
         // redirect to the jokes
-        console.log("reassinging jokes")
+        console.log("reassigning jokes")
         location.assign("/jokes");
     });
 
