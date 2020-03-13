@@ -11,7 +11,7 @@
 
     <!-- cards for injecting from table -->
 
-    {{#each Moments}}
+    {{#each momentTable}}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h6 class="card-subtitle mb-2 text-muted">User: {{this.userName}}</h6>
@@ -22,6 +22,9 @@
 
         </div>
     </div>
+    {{else}}
+    <P>No more posts from Dad users</P>
+
     {{/each}}
 
 
@@ -52,6 +55,6 @@
     //  click events
 
     // API calls
-    console.log("HELLOOOO");
+
 
 </script>
