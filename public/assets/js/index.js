@@ -11,7 +11,7 @@ const password = $("#password");
 const loginUsername = $("#login-username");
 const loginPassword = $("#login-password");
 
-const jokeContainer = $("<div class='joke-container'>")
+//const jokeContainer = $("<div class='joke-container'>")
 
 $(document).ready(function () {
     //  click events
@@ -79,6 +79,8 @@ $(document).ready(function () {
         })
     }
 
+
+
     // function updatePage() {
     //     var joke = joke.joke;
     //     $jokeContainer.append(
@@ -96,7 +98,10 @@ $(document).ready(function () {
     // };
     // findJoke();
 
-    //this is used for updating jokes
+
+
+
+
     // this bottom is for the document.ready
 
     // profile page  ===========================================================

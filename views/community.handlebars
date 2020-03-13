@@ -17,8 +17,7 @@
             <h6 class="card-subtitle mb-2 text-muted">User: {{this.userName}}</h6>
             <p class="card-text">{{this.moments}}</p>
 
-            <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-            <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" onclick="changeImage()">
+            <img src="../images/icons/blackIcons/like.png" id="like" class='heart'>
 
         </div>
     </div>
@@ -31,6 +30,9 @@
     <!--buttons for switching pages-->
     <div class="footers">
 
+
+    <!-- footer -->
+    <div class="footers">
         <a class="col-md-4" style="background-color: #0f133b;" href="/jokes"><img class='profIconSize'
                 src='../images/icons/whiteIcons/jokes.png'></a>
         <a class="col-md-4" style="background-color: #0f133b;" href="/community"><img class='profIconSize'
@@ -48,13 +50,18 @@
         if (document.getElementById("imgClickAndChange").src == "/public/images/icons/blackIcons/like.png") {
             document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/liked.png"
         }
-        else {
-            document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/like.png";
-        }
     }
-    //  click events
+
 
     // API calls
+
+
+    document.querySelector('.heart').addEventListener('click', function () {
+        if (this.getAttribute('src') == "../images/icons/blackIcons/like.png") {
+            this.setAttribute("src", "../images/icons/blackIcons/liked.png");
+        }
+
+    })
 
 
 </script>
