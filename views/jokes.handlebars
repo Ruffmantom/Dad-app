@@ -60,7 +60,7 @@
                 }).then(function (response) {
                     jokesArr.push(response.attachments[0].text);
                     console.log(response.attachments[0].text);
-                    $(".joke-div").append("<p>" + response.attachments[0].text + "<br><button class='saveJoke'> Save Joke 😂</button > </p > ")
+                    $(".joke-div").append("<p>" + response.attachments[0].text + "<br><button type='button' class='btn btn-primary'>Save Joke 😂</button></p > ")
 
 
                 })
