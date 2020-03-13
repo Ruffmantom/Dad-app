@@ -229,8 +229,10 @@ img {
   .joke-container {
       padding-bottom: 20px;
       padding-top: 20px;
-      padding-left: 100px;
-      padding-right: 100px;
+
+      padding-left: 40px;
+      padding-right: 40px;
+
   }
   .joke-div {
       border: solid;
@@ -243,4 +245,9 @@ img {
       height: 40px;
       margin: auto;
       display: flex;
+
+  }
+  .add {
+      width: 20px;
+      height: 20px;
   }

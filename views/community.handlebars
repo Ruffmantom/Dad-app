@@ -10,27 +10,25 @@
 <div class=" container center card-section">
 
     <!-- cards for injecting from table -->
+
+    {{#each momentTable}}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">User:</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
+            <h6 class="card-subtitle mb-2 text-muted">User: {{this.userName}}</h6>
+            <p class="card-text">{{this.moments}}</p>
 
             <img src="../images/icons/blackIcons/like.png" id="like" class='heart'>
 
         </div>
     </div>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">User:</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
+    {{else}}
+    <P>No more posts from Dad users</P>
 
-            <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-            <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" onclick="changeImage()">
+    {{/each}}
 
-        </div>
-    </div>
+
+    <!--buttons for switching pages-->
+    <div class="footers">
 
 
     <!-- footer -->
@@ -56,7 +54,7 @@
     //  click events
 
     // API calls
-    console.log("HELLOOOO");
+
 
     document.querySelector('.heart').addEventListener('click', function () {
         if (this.getAttribute('src') == "../images/icons/blackIcons/like.png") {
