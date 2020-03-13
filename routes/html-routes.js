@@ -1,5 +1,5 @@
 var express = require("express");
-
+const db = require("../models");
 var router = express.Router();
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -19,9 +19,14 @@ router.get("/jokes", function (req, res) {
   res.render("jokes");
 });
 // get the community page
-router.get("/community", function (req, res) {
-  res.render("community");
-});
+// router.get("/community", function (req, res) {
+
+//   res.render("community");
+// });
+// // getting all the data
+// router.get("/api/moments", function (req, res) {
+
+// });
 // get the user profile page
 // if user has been made
 // here is the problem.. this route needs to be "login" like the hw from 14 but it only works when I use profile

@@ -17,11 +17,11 @@
 <body>
     <!-- header -->
     <div class="headerr">
-        <div class="col-md-4"></div>
-        <div class="col-md-4"><img class='logo' src='../images/icons/blackIcons/logoBK.png'></div>
-        <div class="col-md-2"></div>
-        <a class='col-md-2 btn logOut' href='#'><img class='profIconSize '
-                src='../images/icons/blackIcons/Asset 9.png'></a>
+
+        <div class="center"><img class='logo' src='../images/icons/whiteIcons/logoWT.png'></div>
+
+        <a class='btn logOut' href='#'><img class='profIconSize ' src='../images/icons/whiteIcons/whiteLogout.png'></a>
+
     </div>
     <!-- container for all the posts -->
     <div class=" container center card-section">
@@ -33,9 +33,7 @@
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
 
-                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
-                    onclick="changeImage()">
+                <img src="../images/icons/blackIcons/like.png" class='heart'>
 
             </div>
         </div>
@@ -44,80 +42,50 @@
                 <h6 class="card-subtitle mb-2 text-muted">User:</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
+                <img src="../images/icons/blackIcons/like.png" class='heart'>
 
-                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
-                    onclick="changeImage()">
+                <!-- footer -->
 
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">User:</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+                <script> // all of the Jquery and JS for the html in here
 
-                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
-                    onclick="changeImage()">
+                    // function changeImage() {
+                    //     console.log(this);
 
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">User:</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+                    //     if (document.getElementById("imgClickAndChange").src == "/public/images/icons/blackIcons/like.png") {
+                    //         document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/liked.png"
+                    //     }
+                    //     else {
+                    //         document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/like.png";
+                    //     }
+                    // }
+                    //  click events
 
-                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
-                    onclick="changeImage()">
-
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">User:</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-
-                <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;"
-                    onclick="changeImage()">
-
-            </div>
-        </div>
-        <!-- footer -->
-        <div class="footer">
-
-            <a class="col-md-4 btn-primary" href="/jokes"><img class='profIconSize'
-                    src='../images/icons/whiteIcons/jokes.png'></a>
-            <a class="col-md-4 btn-primary" href="/community"><img class='profIconSize'
-                    src='../images/icons/whiteIcons/moments.png'></a>
-            <a class='col-md-4 btn-primary' href="/profile"><img class='profIconSize'
-                    src='../images/icons/whiteIcons/profile.png'></a>
-        </div>
-    </div>
+                    // API calls
+                    console.log("HELLOOOO");
 
 
-    <script> // all of the Jquery and JS for the html in here
+                    document.querySelector('.heart').addEventListener('click', function () {
+                        if (this.getAttribute('src') == "/public/images/icons/blackIcons/like.png") {
+                            this.setAttribute("src", "/public/images/icons/blackIcons/liked.png");
+                        }
+                        else {
+                            this.setAttribute("src", "/public/images/icons/blackIcons/like.png")
+                        }
+                    })
 
-        function changeImage() {
+                </script>
 
-            if (document.getElementById("imgClickAndChange").src == "/public/images/icons/blackIcons/like.png") {
-                document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/liked.png"
-            }
-            else {
-                document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/like.png";
-            }
-        }
-        //  click events
-
-        // API calls
-        console.log("HELLOOOO");
-
-    </script>
-
+                <!-- footer -->
+                <!--buttons for switching pages-->
+                <!--buttons for switching pages-->
+                <div class="footers">
+                    <a class="col-md-4" style="background-color: #0f133b;" href="/jokes"><img class='profIconSize'
+                            src='../images/icons/whiteIcons/jokes.png'></a>
+                    <a class="col-md-4" style="background-color: #0f133b;" href="/community"><img class='profIconSize'
+                            src='../images/icons/whiteIcons/moments.png'></a>
+                    <a class='col-md-4' style="background-color: #0f133b;" href="/profile"><img class='profIconSize'
+                            src='../images/icons/whiteIcons/profile.png'></a>
+                </div>
 </body>
 
 </html>

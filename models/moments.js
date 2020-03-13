@@ -1,6 +1,7 @@
 module.exports = function (sequelize, dataTypes) {
-    var Moments = sequelize.define('moments', {
+    var Moments = sequelize.define('Moments', {
         // making the table here
+        userName: dataTypes.STRING,
         moments: dataTypes.STRING,
         createdAt: {
             type: 'TIMESTAMP',
@@ -12,13 +13,7 @@ module.exports = function (sequelize, dataTypes) {
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         }
-    }, {});
-    Moments.associate = function (models) {
-        Moments.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
-        })
-    };
+    });
+
     return Moments;
 };
