@@ -20,32 +20,19 @@ router.post("/api/moments", function (req, res) {
                 message: "Moment was posted!"
             })
         })
-    db.Moments.findAll(function (data) {
-        console.log("about to find all")
-        var hbsObject = {
-            momentsTable: data
-        };
-        console.log("------------- the hbsObject ----------");
-        console.log(hbsObject);
-        res.render("community", hbsObject);
-    });
+
+
 });
+
 // route for getting all the moments from the moments table
-router.get("/api/community", function (req, res) {
-    var query = {};
-    if (req.query.UserId) {
-        query.UserId = req.query.UserId;
-    }
-    // Here we add an "include" property to our options in our findAll query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Author
-    db.Moments.findAll({
-        where: query,
-        include: [db.User]
-    }).then(function (dbPost) {
-        res.json(dbPost);
-    });
-});
+router.get('/api/moments', (req, res) =>
+    db.Moments.findAll()
+        .then(momentTable => {
+            res.render('community', {
+                momentTable
+            });
+        })
+        .catch(err => console.log(err)));
 
 
 module.exports = router;

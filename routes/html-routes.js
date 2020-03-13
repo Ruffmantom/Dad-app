@@ -20,20 +20,13 @@ router.get("/jokes", function (req, res) {
 });
 // get the community page
 router.get("/community", function (req, res) {
+
   res.render("community");
 });
-// getting all the data
-router.get("/api/moments", function (req, res) {
-  db.Moments.findAll(function (data) {
-    console.log("about to find all")
-    var hbsObject = {
-      momentsTable: data
-    };
-    console.log("------------- the hbsObject ----------");
-    console.log(hbsObject);
-    res.render("community", hbsObject);
-  });
-});
+// // getting all the data
+// router.get("/api/moments", function (req, res) {
+
+// });
 // get the user profile page
 // if user has been made
 // here is the problem.. this route needs to be "login" like the hw from 14 but it only works when I use profile
