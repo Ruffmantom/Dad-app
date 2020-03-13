@@ -1,67 +1,63 @@
 <!-- header -->
 <div class="headerr">
-    <div class="col-md-4"></div>
-    <div class="col-md-4"><img class='logo' src='../images/icons/blackIcons/logoBK.png'></div>
-    <div class="col-md-2"></div>
-    <a class='col-md-2 btn logOut' href='/logout'><img class='profIconSize '
-            src='../images/icons/blackIcons/Asset 9.png'></a>
+
+    <div class="center"><img class='logo' src='../images/icons/whiteIcons/logoWT.png'></div>
+
+    <a class='btn logOut' href='/logout'><img class='profIconSize' src='../images/icons/whiteIcons/whiteLogout.png'></a>
+
 </div>
-<!-- container for all the posts -->
+{{!-- Page title --}}
+<h3 class="page-title">Dad Community</h3>
+{{!-- div to hold all the information --}}
 <div class=" container center card-section">
-
-    <!-- cards for injecting from table -->
-
     {{#each momentTable}}
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem">
         <div class="card-body">
             <h6 class="card-subtitle mb-2 text-muted">User: {{this.userName}}</h6>
             <p class="card-text">{{this.moments}}</p>
-
-            <img src="../images/icons/blackIcons/like.png" id="like" class='heart'>
-
+            <div class="heart-div">
+                <img src="../images/icons/blackIcons/like.png" id="like" style="display: inline;" class='heart'>
+                <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" class='heart'>
+            </div>
         </div>
     </div>
     {{else}}
     <P>No more posts from Dad users</P>
-
     {{/each}}
+</div>
 
-
-    <!--buttons for switching pages-->
-    <div class="footers">
+<!--buttons for switching pages-->
+<div class="footers">
 
 
     <!-- footer -->
     <div class="footers">
         <a class="col-md-4" style="background-color: #0f133b;" href="/jokes"><img class='profIconSize'
-                src='../images/icons/whiteIcons/jokes.png'></a>
+                src='images/icons/whiteIcons/jokes.png'></a>
         <a class="col-md-4" style="background-color: #0f133b;" href="/community"><img class='profIconSize'
-                src='../images/icons/whiteIcons/moments.png'></a>
+                src='images/icons/whiteIcons/momentsInUse.png'></a>
         <a class='col-md-4' style="background-color: #0f133b;" href="/profile"><img class='profIconSize'
-                src='../images/icons/whiteIcons/profile.png'></a>
+                src='images/icons/whiteIcons/profile.png'></a>
     </div>
 </div>
 
 
 <script> // all of the Jquery and JS for the html in here
+    var like = $("#like");
+    var liked = $("#liked");
+    $(document).ready(function () {
+        like.on('click', function () {
+            like.css({ "display": "none" });
+            liked.css({ "display": "inline" });
 
-    function changeImage() {
+        });
 
-        if (document.getElementById("imgClickAndChange").src == "/public/images/icons/blackIcons/like.png") {
-            document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/liked.png"
-        }
-    }
+    });
 
 
-    // API calls
 
 
-    document.querySelector('.heart').addEventListener('click', function () {
-        if (this.getAttribute('src') == "../images/icons/blackIcons/like.png") {
-            this.setAttribute("src", "../images/icons/blackIcons/liked.png");
-        }
 
-    })
 
 
 </script>

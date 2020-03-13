@@ -79,43 +79,4 @@ $(document).ready(function () {
         })
     }
 
-
-
-    // function updatePage() {
-    //     var joke = joke.joke;
-    //     $jokeContainer.append(
-    //         "<div class'joke-div'>" +
-    //         joke +
-    //         "</div>"
-    //     );
-    // };
-    // function findJoke() {
-    //     var url = "https://icanhazdadjoke.com/?accept=application/json/search"
-    //     $.ajax({
-    //         url: url,
-    //         method: "GET"
-    //     }).then(updatePage);
-    // };
-    // findJoke();
-
-
-
-
-
-    // this bottom is for the document.ready
-
-    // profile page  ===========================================================
-    // post to community for the moments
-    // const momentForm = $(".moment-form");
-    // // input box
-    // const dadmmnt = $("#dadmmnt");
-
-    // momentForm.submit(function (event) {
-    //     event.preventDefault();
-    //     var moment = dadmmnt.val().trim();
-    //     console.log("testing");
-
-    // })
-
-
 })

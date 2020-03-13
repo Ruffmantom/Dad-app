@@ -1,4 +1,4 @@
-<!-- header -->
+{{!-- header --}}
 <div class="headerr">
 
     <div class="center"><img class='logo' src='../images/icons/whiteIcons/logoWT.png'></div>
@@ -6,36 +6,54 @@
     <a class='btn logOut' href='/logout'><img class='profIconSize' src='../images/icons/whiteIcons/whiteLogout.png'></a>
 
 </div>
-<div class="container center">
-    <div class="jumbotron center">
-        <div class="dadPoints">Dad Points: <span class=''>{{User.dadLevel}}</span></div><br>
-        <div>
-            <img class='profimg'
-                src="https://m.media-amazon.com/images/M/MV5BNDRkOWIyOTUtMjg5YS00OTJjLTgwNGYtMjgxMTA0NWQ2NGI3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SY1000_CR0,0,666,1000_AL_.jpg">
-        </div>
-        <a href="https://www.google.com" class='changeProfPic'>Change profile picture</a>
-        <!--name portion-->
-        <br><br>
-        {{!-- putting placeholder text for the Username --}}
-        <h4 id="dad-username" class="center">Dadbod21</h4>
-        <!--dad points with span element on unique number-->
-        <h4 class="post-a-moment">Post a joke, Share a dad moment</h4>
-        <form class="moment-form">
-            <input type='text' id='dadmmnt' name='moments'></input><br><br>
-            <input type="submit" class='btn-primary'></input><br><br>
-        </form>
+
+{{!-- main profile container --}}
+<div class="container center" style="padding: 100px 15px;">
+    {{!-- putting placeholder text for the Username --}}
+    <h3 id="dad-username" class="center" style="padding-bottom: 15px;">Dadbod21</h3>
+
+    <div class="dadPoints">
+        {{!-- this is just placeholder till the DB is working --}}
+        <p>Points:<span class='dad-point-spot'> 100 DP</span></p>
     </div>
+    <div>
+        <img class='profimg' src="images/dadPic.jpg">
+    </div>
+    <a href="#" class='changeProfPic'>Change Image</a>
+    <!--name portion-->
+    <br><br>
+
+    <!--dad points with span element on unique number-->
+    <h4 class="post-a-moment">Post a joke, Share a dad moment</h4>
+    <form class="moment-form">
+        <textarea type='text' id='dadmmnt' name='moments'></textarea><br><br>
+        <input type="submit" class='btn btn-primary profile-submit'></input><br><br>
+    </form>
+    {{!-- section for showing favorited jokes and the users posts --}}
+    {{!-- Rockie if you could help figure out how to display the saved jokes and posts --}}
+    {{!-- Might need to make a new table for saved posts --}}
+    <section class="jokes-posts-sec">
+        <div class="profile-saved-btns-div">
+            <button class='saved-BTN'>Liked Jokes</button>
+            <button class='saved-BTN'>Your Posts</button>
+        </div>
+        <div class="input section">
+            {{!-- saved jokes inside here --}}
+        </div>
+    </section>
 </div>
+
 <!--buttons for switching pages-->
 <div class="footers">
-
     <a class="col-md-4" style="background-color: #0f133b;" href="/jokes"><img class='profIconSize'
-            src='../images/icons/whiteIcons/jokes.png'></a>
+            src='images/icons/whiteIcons/jokes.png'></a>
     <a class="col-md-4" style="background-color: #0f133b;" href="/community"><img class='profIconSize'
-            src='../images/icons/whiteIcons/moments.png'></a>
+            src='images/icons/whiteIcons/moments.png'></a>
     <a class='col-md-4' style="background-color: #0f133b;" href="/profile"><img class='profIconSize'
-            src='../images/icons/whiteIcons/profile.png'></a>
+            src='images/icons/whiteIcons/profileInUse.png'></a>
 </div>
+
+{{!-- Custom scripts --}}
 <script>
     const momentForm = $(".moment-form");
     // input box
@@ -55,7 +73,7 @@
                 type: "POST",
                 data: post
             }).then(function (res) {
-                console.log(res);
+
                 dadmmnt.val("");
 
             }).catch(function (err) {
