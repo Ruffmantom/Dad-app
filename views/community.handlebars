@@ -10,37 +10,32 @@
 <div class=" container center card-section">
 
     <!-- cards for injecting from table -->
+
+    {{#each momentTable}}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">User:</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
+            <h6 class="card-subtitle mb-2 text-muted">User: {{this.userName}}</h6>
+            <p class="card-text">{{this.moments}}</p>
 
             <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
             <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" onclick="changeImage()">
 
         </div>
     </div>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">User:</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
+    {{else}}
+    <P>No more posts from Dad users</P>
 
-            <img src="../images/icons/blackIcons/like.png" id="like" onclick="changeImage()">
-            <img src="../images/icons/blackIcons/liked.png" id="liked" style="display: none;" onclick="changeImage()">
-
-        </div>
-    </div>
+    {{/each}}
 
 
-    <!-- footer -->
-    <div class="footer">
-        <a class="col-md-4 btn-primary" href="/jokes"><img class='profIconSize'
+    <!--buttons for switching pages-->
+    <div class="footers">
+
+        <a class="col-md-4" style="background-color: #0f133b;" href="/jokes"><img class='profIconSize'
                 src='../images/icons/whiteIcons/jokes.png'></a>
-        <a class="col-md-4 btn-primary" href="/community"><img class='profIconSize'
+        <a class="col-md-4" style="background-color: #0f133b;" href="/community"><img class='profIconSize'
                 src='../images/icons/whiteIcons/moments.png'></a>
-        <a class='col-md-4 btn-primary' href="/profile"><img class='profIconSize'
+        <a class='col-md-4' style="background-color: #0f133b;" href="/profile"><img class='profIconSize'
                 src='../images/icons/whiteIcons/profile.png'></a>
     </div>
 </div>
@@ -60,6 +55,6 @@
     //  click events
 
     // API calls
-    console.log("HELLOOOO");
+
 
 </script>

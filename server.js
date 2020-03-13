@@ -1,8 +1,5 @@
 var express = require("express");
-
-
 var PORT = process.env.PORT || 8080;
-
 var app = express();
 
 var passport = require('passport')
@@ -40,6 +37,8 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 // Set the routes for the db
 require("./routes/api-routes.js")(app);
+const communityRoutes = require("./routes/api-community");
+app.use(communityRoutes);
 // html routes
 var routes = require("./routes/html-routes.js");
 app.use(routes);
