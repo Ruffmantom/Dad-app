@@ -3,6 +3,7 @@
 #0f133b = dk blue
 #13c0e0 = lt blue
 #c42654 = lt pink
+#8EC63F = lt green
 */
 /* fonts */
 /* 
@@ -248,9 +249,9 @@ body{
 .joke{
     margin: auto;
 }
-.add {
-    width: 25px;
-    height: 25px;
+#add {
+    width: 40px;
+    height: 40px;
     margin: auto;
 
 }
@@ -267,11 +268,12 @@ body{
   img {
     /* border-radius: 50%; */
     height: 170px;
-    width: 170px;
+    width: 170px;  
     }
 
   .profimg {
     border-radius: 50%;
+    border: 5px solid #8EC63F;
   }
 
 
