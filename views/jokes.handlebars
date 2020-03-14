@@ -27,6 +27,7 @@
 </div>
 
 
+
 <script> // all of the Jquery and JS for the html in here
 
     var username = "";
@@ -68,6 +69,7 @@
                 }).then(function (response) {
                     console.log("before build html");
                     console.log(response.attachments[0].text);
+
                     $(".maincontainer").append(
                         `<div data-index="` + i + `"class="joke-container card-body">
                             <div class="img-container">
