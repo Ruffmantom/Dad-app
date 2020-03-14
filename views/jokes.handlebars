@@ -30,6 +30,33 @@
 
 <script> // all of the Jquery and JS for the html in here
 
+    var username = "";
+    $.get("/api/user_data").then(function (response) {
+        username = response.username;
+    });
+
+
+    function clicked() {
+        console.log("--------------getting dataindex --------------");
+        console.log(parentElement.data("index"));
+        console.log("--------------getting dataindex --------------");
+        var joke = $(".joke").text();
+        var jokeData = {
+            username: username,
+            joke: joke
+        };
+        console.log(jokeData);
+        $.ajax("/api/jokes", {
+            type: "POST",
+            data: jokeData
+        }).then(function (res) {
+            console.log("completed post to jokes")
+        }).catch(function (err) {
+            console.log(err);
+        })
+    }
+
+
     $(document).ready(function () {
 
         function jokeSearch() {
@@ -44,9 +71,9 @@
                     console.log(response.attachments[0].text);
 
                     $(".maincontainer").append(
-                        `<div class="joke-container card-body">
+                        `<div data-index="` + i + `"class="joke-container card-body">
                             <div class="img-container">
-                                <img src="images/icons/blueplus.png" class="add">
+                                <button type="button" onclick="clicked()" id="add">➕</button>
                             </div>
                             <div class=" card joke-div">
                                 <p class="joke">` + response.attachments[0].text + `</p>
@@ -57,6 +84,7 @@
         };
         jokeSearch();
 
-    });
+    })
+
 
 </script>

@@ -36,4 +36,22 @@ router.get('/community', (req, res) =>
         .catch(err => console.log(err)));
 
 
+// route for posting api-jokes
+router.post("/api/jokes", (req, res) => {
+    var joke = req.body.joke;
+    var username = req.body.username;
+    db.Jokes.create({ jokes: joke })
+        .then(function () {
+            res.status(201).json({
+                message: "joke was posted!"
+            })
+        })
+})
+// route for getting api-jokes
+router.get("/api/jokes", (req, res) => {
+    res.json({
+        message: "get worked!"
+    })
+})
+
 module.exports = router;
