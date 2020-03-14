@@ -36,14 +36,13 @@
     });
 
 
-    function clicked() {
-        console.log("--------------getting dataindex --------------");
-        console.log(parentElement.data("index"));
-        console.log("--------------getting dataindex --------------");
-        var joke = $(".joke").text();
+    function clicked(index) {
+        console.log(index);
+
+        var joke = $(".joke").eq(index).text();
         var jokeData = {
             username: username,
-            joke: joke
+            jokes: joke
         };
         console.log(jokeData);
         $.ajax("/api/jokes", {
@@ -54,6 +53,7 @@
         }).catch(function (err) {
             console.log(err);
         })
+
     }
 
 
@@ -62,6 +62,7 @@
         function jokeSearch() {
             var queryURL = "https://icanhazdadjoke.com/slack";
             var jokesArr = [];
+            var myIndex = 0;
             for (var i = 0; i < 10; i++) {
                 $.ajax({
                     url: queryURL,
@@ -71,14 +72,15 @@
                     console.log(response.attachments[0].text);
 
                     $(".maincontainer").append(
-                        `<div data-index="` + i + `"class="joke-container card-body">
+                        `<div data-index="${myIndex}"class="joke-container card-body">
                             <div class="img-container">
-                                <button type="button" onclick="clicked()" id="add">➕</button>
+                                <button type="button" onclick="clicked(${myIndex})" id="add">➕</button>
                             </div>
                             <div class=" card joke-div">
                                 <p class="joke">` + response.attachments[0].text + `</p>
                             </div>      
                         </div> `);
+                    myIndex++;
                 });
             };
         };
