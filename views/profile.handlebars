@@ -25,8 +25,9 @@
 
     <!--dad points with span element on unique number-->
     <h4 class="post-a-moment">Post a joke, Share a dad moment</h4>
+    <p style="display: none;" class="error-message">Please make sure you have up to 100 charactrs</p>
     <form class="moment-form">
-        <textarea type='text' id='dadmmnt' name='moments'></textarea><br><br>
+        <textarea type='text' id='dadmmnt' name='moments' minlength="25"></textarea><br><br>
         <input type="submit" class='btn btn-primary profile-submit'></input><br><br>
     </form>
     {{!-- section for showing favorited jokes and the users posts --}}
@@ -63,6 +64,7 @@
 
     $(document).ready(function () {
         momentForm.submit(function (event) {
+
             event.preventDefault();
             var post = {
                 moment: dadmmnt.val().trim(),
@@ -73,12 +75,11 @@
                 type: "POST",
                 data: post
             }).then(function (res) {
-
                 dadmmnt.val("");
-
             }).catch(function (err) {
                 console.log(err);
             })
+
         });
     });
 
