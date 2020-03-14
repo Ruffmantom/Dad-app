@@ -3,78 +3,57 @@
 
     <div class="center"><img class='logo' src='../images/icons/whiteIcons/logoWT.png'></div>
 
-    <a class='btn logOut' href='#'><img class='profIconSize ' src='../images/icons/whiteIcons/whiteLogout.png'></a>
+    <a class='btn logOut' href='/logout'><img class='profIconSize' src='../images/icons/whiteIcons/whiteLogout.png'></a>
 
 </div>
 
-<!-- joke container -->
-<div class="container center">
 
-    <div class="jumbotron center">
-        <div class="heading-container">
-            <p class="heading">Read it, Save it, Share it</p>
-        </div>
-    </div>
-    <div class="joke-container">
-        <div class=img-container>
-            <img src="../images/icons/blackIcons/jokesInUse.png" alt="">
-        </div>
-        <div class="joke-div">
-
-        </div>
-        <br>
-    </div>
+<h3 class="page-title">Dad Jokes All day Every Day</h3>
+<!-- Main joke container -->
+<div class="maincontainer">
+    {{!-- this is were the jokes get appended to --}}
+    {{!-- If we could figure out how to add these jokes to the DB for a certain user --}}
 </div>
 
 
 <!--buttons for switching pages-->
 <div class="footers">
     <a class="col-md-4" style="background-color: #0f133b;" href="/jokes"><img class='profIconSize'
-            src='../images/icons/whiteIcons/jokes.png'></a>
+            src='images/icons/whiteIcons/jokesInUse.png'></a>
     <a class="col-md-4" style="background-color: #0f133b;" href="/community"><img class='profIconSize'
-            src='../images/icons/whiteIcons/moments.png'></a>
+            src='images/icons/whiteIcons/moments.png'></a>
     <a class='col-md-4' style="background-color: #0f133b;" href="/profile"><img class='profIconSize'
-            src='../images/icons/whiteIcons/profile.png'></a>
+            src='images/icons/whiteIcons/profile.png'></a>
 </div>
-
 
 
 <script> // all of the Jquery and JS for the html in here
 
     $(document).ready(function () {
-        jokeSearch();
-        function changeImage() {
 
-            if (document.getElementById("imgClickAndChange").src == "/public/images/icons/blackIcons/like.png") {
-                document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/liked.png"
-            }
-            else {
-                document.getElementById("imgClickAndChange").src = "/public/images/icons/blackIcons/like.png";
-            }
-        }
-
-
-        //AJAX call for user search/keyword
         function jokeSearch() {
             var queryURL = "https://icanhazdadjoke.com/slack";
             var jokesArr = [];
-
             for (var i = 0; i < 10; i++) {
                 $.ajax({
                     url: queryURL,
                     method: "GET"
                 }).then(function (response) {
-                    jokesArr.push(response.attachments[0].text);
+                    console.log("before build html");
                     console.log(response.attachments[0].text);
-                    $(".joke-div").append("<p>" + response.attachments[0].text + "<br><button type='button' class='btn btn-primary'>Save Joke 😂</button></p > ")
-
-
-                })
-            }
-
-        }
-
-
+                    $(".maincontainer").append(
+                        `<div class="joke-container card-body">
+                            <div class="img-container">
+                                <img src="images/icons/blueplus.png" class="add">
+                            </div>
+                            <div class=" card joke-div">
+                                <p class="joke">` + response.attachments[0].text + `</p>
+                            </div>      
+                        </div> `);
+                });
+            };
+        };
+        jokeSearch();
     });
 
 </script>

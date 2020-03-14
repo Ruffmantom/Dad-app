@@ -26,7 +26,7 @@ router.post("/api/moments", function (req, res) {
 
 // route for getting all the moments from the moments table
 router.get('/community', (req, res) =>
-    db.Moments.findAll({ raw: true })
+    db.Moments.findAll({ raw: true, order: [['updatedAt', 'DESC']] })
         .then(momentTable => {
             console.log(momentTable);
             res.render('community', {
