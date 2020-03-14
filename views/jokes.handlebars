@@ -27,6 +27,7 @@
 </div>
 
 
+
 <script> // all of the Jquery and JS for the html in here
 
     $(document).ready(function () {
@@ -41,6 +42,7 @@
                 }).then(function (response) {
                     console.log("before build html");
                     console.log(response.attachments[0].text);
+
                     $(".maincontainer").append(
                         `<div class="joke-container card-body">
                             <div class="img-container">
@@ -54,6 +56,7 @@
             };
         };
         jokeSearch();
+
     });
 
 </script>
