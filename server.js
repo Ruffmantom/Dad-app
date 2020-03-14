@@ -1,15 +1,20 @@
 var express = require("express");
-var PORT = process.env.PORT || 8080;
-var app = express();
+var session = require('express-session');
 
-var passport = require('passport')
-var session = require('express-session')
-var bodyParser = require('body-parser')
+var passport = require('passport');
+
 // var env = require('dotenv').load();
+var app = express();
+// Parse application body as JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
 
-//For BodyParser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+var PORT = process.env.PORT || 8080;
+// Requiring our models for syncing
+var db = require("./models");
+
 
 // For Passport
 
@@ -21,15 +26,8 @@ app.use(passport.session()); // persistent login sessions
 
 
 
-// Requiring our models for syncing
-var db = require("./models");
 
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
 
-// Parse application body as JSON
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");

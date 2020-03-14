@@ -1,5 +1,4 @@
 var express = require("express");
-const db = require("../models");
 var router = express.Router();
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -9,28 +8,18 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 router.get("/", function (req, res) {
   // If the user already has an account send them to the members page
   if (req.User) {
-    res.render("profile");
+    res.redirect("/profile");
   }
   res.render("index");
-
 });
 // get the jokes page
 router.get("/jokes", function (req, res) {
   res.render("jokes");
 });
-// get the community page
-// router.get("/community", function (req, res) {
 
-//   res.render("community");
-// });
-// // getting all the data
-// router.get("/api/moments", function (req, res) {
-
-// });
-// get the user profile page
-// if user has been made
 // here is the problem.. this route needs to be "login" like the hw from 14 but it only works when I use profile
-router.get("/profile", function (req, res) {
+router.get("/login", function (req, res) {
+  console.log("-----------this is the route to profile")
   // If the user already has an account send them to the profile page
   if (req.user) {
     res.redirect("/profile");
