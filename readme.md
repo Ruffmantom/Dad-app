@@ -22,7 +22,7 @@ npm start
 ---
 #App working
 This is what you will see when you first start up the app
-[]{./}
+[sign up or log in]{./public/images/dadlifeSignIn.PNG}
 
 
 
