@@ -22,8 +22,16 @@ npm start
 ---
 #App working
 This is what you will see when you first start up the app
-
 ![sign up or log in](/public/images/dadlifeSignIn.PNG)
+
+When you login or sign up you will be directed straight to the profile page
+![sign up or log in](/public/images/mobileProfile.PNG)
+
+You can navigate to the community and the jokes page from there
+![sign up or log in](/public/images/community.PNG)
+
+This is where the jokes are coming in from an api call. Future development concept is to save these to the users profile. Once the user wants to sign out or get off they can simply press the icon at the top right corner.
+![sign up or log in](/public/images/jokespage.PNG)
 
 
 
