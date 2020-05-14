@@ -1,8 +1,6 @@
 # Dad Life
 
-Dad Life is a application that lets a user create an online dad profile to share "dad" moments and dad jokes with the community.
-The user will also be able to save dad jokes to their profile for future revisiting.
-Other users will be able to like or comment on the dad moments or dad jokes that get posted in the community page.
+Dad Life is an application that lets a user create an online dad profile to share "dad" moments and dad jokes with the community. The user will also be able to save dad jokes to their profile for future revisiting. Other users will be able to like or comment on the dad moments/dad jokes that get posted on the community page.
 
 ## Installation
 
